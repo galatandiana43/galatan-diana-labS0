@@ -22,7 +22,9 @@
             </intent-filter>
         </activity>
 
-        <!-- TODO: declara aici GameActivity, cu android:exported="false". -->
+        <activity
+            android:name=".GameActivity"
+            android:exported="false" />
 
         <!-- TODO (tema): declara aici si InstructionsActivity, cu android:exported="false". -->
 

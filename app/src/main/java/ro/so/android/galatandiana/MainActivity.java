@@ -39,15 +39,13 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
-        // TODO 1: gaseste butonul cu ID-ul buttonStart si pastreaza-l
-        // intr-o variabila de tip Button (findViewById).
+        Button buttonStart = findViewById(R.id.buttonStart);
 
-        // TODO 2: adauga un listener de click pe buton (setOnClickListener).
-        // In lambda:
-        //   a) scrie in Logcat mesajul "Deschidem GameActivity" (Log.d);
-        //   b) creeaza un Intent explicit catre GameActivity.class,
-        //      folosind MainActivity.this ca prim parametru;
-        //   c) porneste ecranul cu startActivity(intent).
+        buttonStart.setOnClickListener(v -> {
+            Log.d(TAG, "Deschidem GameActivity");
+            Intent intent = new Intent(MainActivity.this, GameActivity.class);
+            startActivity(intent);
+        });
 
         // TODO (tema): gaseste butonul buttonInstructions si adauga-i un listener
         // care scrie in Logcat "Deschidem InstructionsActivity" si porneste

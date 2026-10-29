@@ -28,11 +28,12 @@
             android:text="@string/menu_description"
             android:textSize="18sp" />
 
-        <!-- TODO: adauga un Button:
-             - ID: buttonStart (@+id/buttonStart);
-             - latime match_parent, inaltime wrap_content;
-             - marginTop 32dp;
-             - textul din resursa start_game (@string/start_game). -->
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/start_game" />
 
         <!-- TODO (tema): adauga un al doilea Button:
              - ID: buttonInstructions (@+id/buttonInstructions);

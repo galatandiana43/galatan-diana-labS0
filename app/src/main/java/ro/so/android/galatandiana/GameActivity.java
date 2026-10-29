@@ -21,7 +21,7 @@ public class GameActivity extends AppCompatActivity {
 
         EdgeToEdge.enable(this);
 
-        // TODO 1: incarca layout-ul activity_game cu setContentView.
+        setContentView(R.layout.activity_game);
 
         ViewCompat.setOnApplyWindowInsetsListener(
                 findViewById(R.id.gameRoot),
@@ -38,11 +38,12 @@ public class GameActivity extends AppCompatActivity {
                 }
         );
 
-        // TODO 2: gaseste butonul cu ID-ul buttonBack (findViewById).
+        Button buttonBack = findViewById(R.id.buttonBack);
 
-        // TODO 3: adauga un listener de click pe buton. In lambda:
-        //   a) scrie in Logcat mesajul "Inchidem GameActivity";
-        //   b) inchide ecranul curent cu finish().
+        buttonBack.setOnClickListener(v -> {
+            Log.d(TAG, "Inchidem GameActivity");
+            finish();
+        });
     }
 
     @Override
