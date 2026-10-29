@@ -114,13 +114,8 @@ public class BoardView extends View {
         }
 
         drawGrid(canvas);
-        drawSnakeSimple(canvas);
+        drawSnake(canvas);
         drawObstacles(canvas);
-
-        // TODO 4: dupa ce sarpele din patrate apare corect (TODO 3), inlocuiti
-        // mai sus drawSnakeSimple(canvas) cu drawSnake(canvas).
-        // drawSnake() este deja scrisa mai jos si deseneaza sarpele cu corp
-        // continuu, ochi si limba. Nu trebuie sa o modificati.
     }
 
     private void drawGrid(Canvas canvas) {
@@ -145,16 +140,17 @@ public class BoardView extends View {
     private void drawSnakeSimple(Canvas canvas) {
         float gap = cellSize * 0.08f;
 
-        // TODO 3: deseneaza sarpele, cate un patrat pentru fiecare celula.
-        // Parcurgeti lista state.snake cu un for (Cell cell : state.snake).
-        // Pentru fiecare celula:
-        //   a) calculati coltul din stanga-sus al celulei, in pixeli:
-        //        float left = boardLeft + cell.col * cellSize;
-        //        float top = boardTop + cell.row * cellSize;
-        //   b) desenati patratul cu canvas.drawRect(...), cu piecePaint.
-        //      Lasati spatiul gap pe fiecare latura, ca segmentele sa nu se lipeasca:
-        //        stanga: left + gap          sus: top + gap
-        //        dreapta: left + cellSize - gap    jos: top + cellSize - gap
+        for (Cell cell : state.snake) {
+            float left = boardLeft + cell.col * cellSize;
+            float top = boardTop + cell.row * cellSize;
+            canvas.drawRect(
+                    left + gap,
+                    top + gap,
+                    left + cellSize - gap,
+                    top + cellSize - gap,
+                    piecePaint
+            );
+        }
     }
 
     private void drawSnake(Canvas canvas) {

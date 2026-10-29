@@ -6,14 +6,11 @@ import java.util.List;
 
 public final class GameState {
 
-    // TODO 2: inlocuieste lista goala de mai jos cu o lista care contine
-    // cele 3 celule ale sarpelui, in aceasta ordine:
-    //   new Cell(4, 4)  - capul
-    //   new Cell(3, 4)  - corpul
-    //   new Cell(2, 4)  - coada
-    // Folositi new ArrayList<>(Arrays.asList(...)), ca lista sa poata fi
-    // modificata la Lab 4.
-    public final List<Cell> snake = new ArrayList<>();
+    public final List<Cell> snake = new ArrayList<>(Arrays.asList(
+            new Cell(4, 4),
+            new Cell(3, 4),
+            new Cell(2, 4)
+    ));
 
     public final List<Cell> obstacles = new ArrayList<>();
 
