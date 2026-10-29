@@ -282,10 +282,9 @@ public class BoardView extends View {
     }
 
     private void drawObstacles(Canvas canvas) {
-        // TODO 7 (tema): deseneaza obstacolele din lista state.obstacles.
-        // Parcurgeti lista cu un for, ca la sarpe, si pentru fiecare celula apelati:
-        //   drawCell(canvas, cell, obstaclePaint);
-        // drawCell() este scrisa mai jos: deseneaza un patrat pe toata celula.
+        for (Cell cell : state.obstacles) {
+            drawCell(canvas, cell, obstaclePaint);
+        }
     }
 
     private void drawCell(Canvas canvas, Cell cell, Paint paint) {

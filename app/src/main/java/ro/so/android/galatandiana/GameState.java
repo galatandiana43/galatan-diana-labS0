@@ -14,13 +14,8 @@ public final class GameState {
 
     public final List<Cell> obstacles = new ArrayList<>();
 
-    // TODO 6 (tema): adauga in lista obstacles doua celule.
-    // Alegeti voi pozitiile, cu doua conditii:
-    //   - col si row sunt intre 0 si 9;
-    //   - nu sunt pe sarpe: (4, 4), (3, 4), (2, 4).
-    // Scrieti un constructor GameState() si, in el, adaugati obstacolele, de exemplu:
-    //   public GameState() {
-    //       obstacles.add(new Cell(..., ...));
-    //       obstacles.add(new Cell(..., ...));
-    //   }
+    public GameState() {
+        obstacles.add(new Cell(7, 2));
+        obstacles.add(new Cell(1, 8));
+    }
 }
