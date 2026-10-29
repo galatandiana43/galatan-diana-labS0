@@ -70,11 +70,17 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, getClass().getSimpleName() + " onPause");
     }
 
-    // TODO 3: suprascrie onStop(). Apeleaza super.onStop() si scrie in Logcat
-    // numele clasei urmat de " onStop", la fel ca in celelalte metode.
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, getClass().getSimpleName() + " onStop");
+    }
 
-    // TODO 4: suprascrie onRestart(). Apeleaza super.onRestart() si scrie in Logcat
-    // numele clasei urmat de " onRestart", la fel ca in celelalte metode.
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, getClass().getSimpleName() + " onRestart");
+    }
 
     @Override
     protected void onDestroy() {

@@ -58,8 +58,11 @@ public class GameActivity extends AppCompatActivity {
         Log.d(TAG, getClass().getSimpleName() + " onResume");
     }
 
-    // TODO 4: suprascrie onPause(). Apeleaza super.onPause() si scrie in Logcat
-    // numele clasei urmat de " onPause", la fel ca in celelalte metode.
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, getClass().getSimpleName() + " onPause");
+    }
 
     @Override
     protected void onStop() {
@@ -73,6 +76,9 @@ public class GameActivity extends AppCompatActivity {
         Log.d(TAG, getClass().getSimpleName() + " onRestart");
     }
 
-    // TODO 5: suprascrie onDestroy(). Apeleaza super.onDestroy() si scrie in Logcat
-    // numele clasei urmat de " onDestroy", la fel ca in celelalte metode.
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, getClass().getSimpleName() + " onDestroy");
+    }
 }
