@@ -47,9 +47,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // TODO (tema): gaseste butonul buttonInstructions si adauga-i un listener
-        // care scrie in Logcat "Deschidem InstructionsActivity" si porneste
-        // InstructionsActivity, la fel ca la butonul Start.
+        Button buttonInstructions = findViewById(R.id.buttonInstructions);
+
+        buttonInstructions.setOnClickListener(v -> {
+            Log.d(TAG, "Deschidem InstructionsActivity");
+            Intent intent = new Intent(MainActivity.this, InstructionsActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override

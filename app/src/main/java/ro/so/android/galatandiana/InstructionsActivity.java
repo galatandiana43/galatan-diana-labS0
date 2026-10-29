@@ -21,7 +21,7 @@ public class InstructionsActivity extends AppCompatActivity {
 
         EdgeToEdge.enable(this);
 
-        // TODO 1: incarca layout-ul activity_instructions cu setContentView.
+        setContentView(R.layout.activity_instructions);
 
         ViewCompat.setOnApplyWindowInsetsListener(
                 findViewById(R.id.instructionsRoot),
@@ -38,15 +38,47 @@ public class InstructionsActivity extends AppCompatActivity {
                 }
         );
 
-        // TODO 2: gaseste butonul cu ID-ul buttonInstructionsBack.
+        Button buttonInstructionsBack = findViewById(R.id.buttonInstructionsBack);
 
-        // TODO 3: adauga un listener de click pe buton. In lambda:
-        //   a) scrie in Logcat mesajul "Inchidem InstructionsActivity";
-        //   b) inchide ecranul curent cu finish().
+        buttonInstructionsBack.setOnClickListener(v -> {
+            Log.d(TAG, "Inchidem InstructionsActivity");
+            finish();
+        });
     }
 
-    // TODO 4: adauga metodele lifecycle onStart(), onResume(), onPause(),
-    // onStop(), onRestart() si onDestroy(), la fel ca in GameActivity.
-    // Fiecare apeleaza metoda din super si scrie in Logcat numele clasei
-    // urmat de numele metodei, de exemplu "InstructionsActivity onStart".
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, getClass().getSimpleName() + " onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, getClass().getSimpleName() + " onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, getClass().getSimpleName() + " onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, getClass().getSimpleName() + " onStop");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, getClass().getSimpleName() + " onRestart");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, getClass().getSimpleName() + " onDestroy");
+    }
 }
