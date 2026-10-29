@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class InstructionsActivity extends AppCompatActivity {
-    private static final String TAG = "Lab02";
+    private static final String TAG = "Lab03";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

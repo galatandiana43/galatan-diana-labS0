@@ -330,10 +330,11 @@ public class BoardView extends View {
             case MotionEvent.ACTION_DOWN:
                 Cell cell = cellFromTouch(event.getX(), event.getY());
 
-                // TODO 5: scrieti in Logcat celula atinsa.
-                //   a) daca cell nu este null, scrieti cu Log.d(TAG, ...) mesajul
-                //      "col=" + cell.col + ", row=" + cell.row
-                //   b) altfel, scrieti mesajul "atingere in afara tablei".
+                if (cell != null) {
+                    Log.d(TAG, "col=" + cell.col + ", row=" + cell.row);
+                } else {
+                    Log.d(TAG, "atingere in afara tablei");
+                }
 
                 return true;
 

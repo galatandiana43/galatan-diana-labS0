@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "Lab02";
+    private static final String TAG = "Lab03";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     return windowInsets;
                 }
         );
+        Log.d(TAG, getClass().getSimpleName() + " PID=" + android.os.Process.myPid());
 
         Button buttonStart = findViewById(R.id.buttonStart);
 
